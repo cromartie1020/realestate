@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Book Detail{% endblock %}
+{% block content %}
+   {% if review %}
+    <h1>{{ review.book.title }}</h1>
+    <p>{{ review.content }}</p>
+    <p>Rating: {{ review.rating }}</p>
+   {% else %}
+     <p>Review not done for this book yet.</p>
+   {% endif %}
+{% endblock %}
