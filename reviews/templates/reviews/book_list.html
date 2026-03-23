@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}Bookr{% endblock %}</title>
-    
+
 </head>
     <body>
         {% block content %}
@@ -15,7 +15,7 @@
         <ul>
           {% for item in book_list %}
           <li>
-              <span>Title: </span> <span>{{ item.book.title }}</span>
+              <span>Title: </span> <span><a href="{% url 'book_detail' item.book.id %}">{{ item.book.title }}</a></span>
               <br>
               <span>Publisher: </span><span>{{ item.book.publisher }}</span>
               <br>
